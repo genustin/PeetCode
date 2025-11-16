@@ -1,73 +1,84 @@
 """
-LeetCode Solution Template
-This template provides a consistent structure for all LeetCode solutions.
+LeetCode Problem [Problem Number]: [Problem Title]
+Difficulty: [Easy/Medium/Hard]
+Category: [Primary Category] & [Secondary Category]
+URL: https://leetcode.com/problems/[problem-slug]/
+
+[Complete problem description from LeetCode]
+
+[Additional constraints or requirements]
 """
 
+from typing import List, Optional, Dict, Set, Tuple
+
 class Solution:
-    def problem_name(self, inputs) -> output_type:
+    def method_name(self, parameters: type) -> return_type:
         """
-        Problem: [Problem Title]
-        Difficulty: [Easy/Medium/Hard]
-        Problem Number: [Problem Number]
-        Category: [Algorithm Category]
-        URL: https://leetcode.com/problems/[problem-slug]/
+        Approach: [Brief description of solution approach]
 
-        Problem Description:
-        [Brief problem description]
+        [Detailed explanation of the algorithm]
+        [Step-by-step description of the approach]
 
-        Approach:
-        [Detailed explanation of the solution approach]
-
-        Time Complexity: O(...)
-        Space Complexity: O(...)
+        Time Complexity: O(...) - [Explanation]
+        Space Complexity: O(...) - [Explanation]
 
         Key Insights:
-        - [Key insight 1]
-        - [Key insight 2]
-        - [Key insight 3]
+        - [Important insight 1]
+        - [Important insight 2]
+        - [Important insight 3]
 
-        Example:
-        Input: [example input]
-        Output: [example output]
-        Explanation: [example explanation]
+        Alternative Approaches Considered:
+        - [Alternative approach 1] - [Why it wasn't chosen]
+        - [Alternative approach 2] - [Why it wasn't chosen]
         """
-        # Implementation goes here
+        # Implementation
         pass
 
 
-def test_solution():
-    """
-    Test function to verify the solution
-    """
-    solution = Solution()
-
-    # Test case 1: Basic example
-    test1_input = []
-    test1_expected = []
-    test1_result = solution.problem_name(test1_input)
-    assert test1_result == test1_expected, f"Test 1 failed: expected {test1_expected}, got {test1_result}"
-
-    # Test case 2: Edge case
-    test2_input = []
-    test2_expected = []
-    test2_result = solution.problem_name(test2_input)
-    assert test2_result == test2_expected, f"Test 2 failed: expected {test2_expected}, got {test2_result}"
-
-    # Test case 3: Large input
-    test3_input = []
-    test3_expected = []
-    test3_result = solution.problem_name(test3_input)
-    assert test3_result == test3_expected, f"Test 3 failed: expected {test3_expected}, got {test3_result}"
-
-    print("All tests passed!")
-
-
 if __name__ == "__main__":
-    # Run tests
-    test_solution()
-
-    # Example usage
     solution = Solution()
-    example_input = []
-    result = solution.problem_name(example_input)
-    print(f"Example result: {result}")
+
+    # Test cases
+    test_cases = [
+        # Example 1: Basic functionality
+        {
+            "input": [input_values],
+            "expected": expected_output,
+            "description": "Basic functionality test"
+        },
+        # Example 2: Edge case
+        {
+            "input": [input_values],
+            "expected": expected_output,
+            "description": "Edge case test"
+        },
+        # Example 3: Large input
+        {
+            "input": [input_values],
+            "expected": expected_output,
+            "description": "Large input test"
+        }
+    ]
+
+    # Run test cases
+    print("=== Running Test Cases ===")
+    for i, test in enumerate(test_cases, 1):
+        result = solution.method_name(*test["input"])
+        status = "✅ PASS" if result == test["expected"] else "❌ FAIL"
+        print(f"Test {i}: {status} - {test['description']}")
+        print(f"  Input: {test['input']}")
+        print(f"  Expected: {test['expected']}")
+        print(f"  Got: {result}")
+        print()
+
+    # Compare approaches if multiple methods exist
+    if hasattr(solution, 'alternative_approach'):
+        print("\n=== Approach Comparison ===")
+        for test in test_cases[:2]:  # Compare first 2 test cases
+            result1 = solution.method_name(*test["input"])
+            result2 = solution.alternative_approach(*test["input"])
+            print(f"Test: {test['description']}")
+            print(f"  Primary approach: {result1}")
+            print(f"  Alternative approach: {result2}")
+            print(f"  Results match: {result1 == result2}")
+            print()
