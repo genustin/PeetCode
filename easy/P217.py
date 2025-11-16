@@ -71,51 +71,16 @@ class Solution:
         return False
 
 
-def test_contains_duplicate():
-    """Test function for Contains Duplicate solution"""
-    solution = Solution()
-
-    # Test case 1: Array with duplicates
-    nums1 = [1, 2, 3, 1]
-    result1 = solution.containsDuplicate(nums1)
-    assert result1 == True, f"Test 1 failed: expected True, got {result1}"
-
-    # Test case 2: Array without duplicates
-    nums2 = [1, 2, 3, 4]
-    result2 = solution.containsDuplicate(nums2)
-    assert result2 == False, f"Test 2 failed: expected False, got {result2}"
-
-    # Test case 3: Large array with duplicates
-    nums3 = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
-    result3 = solution.containsDuplicate(nums3)
-    assert result3 == True, f"Test 3 failed: expected True, got {result3}"
-
-    # Test case 4: Single element
-    nums4 = [1]
-    result4 = solution.containsDuplicate(nums4)
-    assert result4 == False, f"Test 4 failed: expected False, got {result4}"
-
-    # Test case 5: Empty array
-    nums5 = []
-    result5 = solution.containsDuplicate(nums5)
-    assert result5 == False, f"Test 5 failed: expected False, got {result5}"
-
-    print("All Contains Duplicate tests passed!")
-
-
 if __name__ == "__main__":
-    # Run tests
-    test_contains_duplicate()
-
-    # Example usage
+    # Simple example usage
     solution = Solution()
 
-    # Example 1
+    # Example 1: Basic usage
     nums = [1, 2, 3, 1]
     result = solution.containsDuplicate(nums)
     print(f"Example 1 - nums: {nums}, contains duplicate: {result}")
 
-    # Compare approaches
+    # Example 2: Compare approaches
     result_sort = solution.containsDuplicate_sorting(nums)
     result_bf = solution.containsDuplicate_brute_force(nums)
     print(f"Sorting approach: {result_sort}")

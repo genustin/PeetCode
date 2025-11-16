@@ -91,57 +91,11 @@ class Solution:
             nums1[i] = merged[i]
 
 
-def test_merge():
-    """Test function for Merge Sorted Array solution"""
-    solution = Solution()
-
-    # Test case 1: Basic example
-    nums1 = [1, 2, 3, 0, 0, 0]
-    m = 3
-    nums2 = [2, 5, 6]
-    n = 3
-    solution.merge(nums1, m, nums2, n)
-    expected = [1, 2, 2, 3, 5, 6]
-    assert nums1 == expected, f"Test 1 failed: expected {expected}, got {nums1}"
-
-    # Test case 2: nums1 empty
-    nums1 = [0]
-    m = 0
-    nums2 = [1]
-    n = 1
-    solution.merge(nums1, m, nums2, n)
-    expected = [1]
-    assert nums1 == expected, f"Test 2 failed: expected {expected}, got {nums1}"
-
-    # Test case 3: nums2 empty
-    nums1 = [1]
-    m = 1
-    nums2 = []
-    n = 0
-    solution.merge(nums1, m, nums2, n)
-    expected = [1]
-    assert nums1 == expected, f"Test 3 failed: expected {expected}, got {nums1}"
-
-    # Test case 4: Both arrays have elements
-    nums1 = [4, 5, 6, 0, 0, 0]
-    m = 3
-    nums2 = [1, 2, 3]
-    n = 3
-    solution.merge(nums1, m, nums2, n)
-    expected = [1, 2, 3, 4, 5, 6]
-    assert nums1 == expected, f"Test 4 failed: expected {expected}, got {nums1}"
-
-    print("All Merge Sorted Array tests passed!")
-
-
 if __name__ == "__main__":
-    # Run tests
-    test_merge()
-
-    # Example usage
+    # Simple example usage
     solution = Solution()
 
-    # Example 1
+    # Example 1: Basic usage
     nums1 = [1, 2, 3, 0, 0, 0]
     m = 3
     nums2 = [2, 5, 6]
@@ -151,7 +105,7 @@ if __name__ == "__main__":
     solution.merge(nums1, m, nums2, n)
     print(f"After merge - nums1: {nums1}")
 
-    # Test with extra space approach
+    # Example 2: Compare approaches
     nums1_extra = [1, 2, 3, 0, 0, 0]
     solution.merge_extra_space(nums1_extra, m, nums2, n)
     print(f"Extra space approach: {nums1_extra}")

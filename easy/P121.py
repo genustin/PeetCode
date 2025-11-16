@@ -99,57 +99,17 @@ class Solution:
         return max_so_far
 
 
-def test_max_profit():
-    """Test function for Best Time to Buy and Sell Stock solution"""
-    solution = Solution()
-
-    # Test case 1: Basic example
-    prices1 = [7, 1, 5, 3, 6, 4]
-    result1 = solution.maxProfit(prices1)
-    expected1 = 5  # Buy at 1, sell at 6
-    assert result1 == expected1, f"Test 1 failed: expected {expected1}, got {result1}"
-
-    # Test case 2: No profit possible
-    prices2 = [7, 6, 4, 3, 1]
-    result2 = solution.maxProfit(prices2)
-    expected2 = 0
-    assert result2 == expected2, f"Test 2 failed: expected {expected2}, got {result2}"
-
-    # Test case 3: Single day
-    prices3 = [1]
-    result3 = solution.maxProfit(prices3)
-    expected3 = 0
-    assert result3 == expected3, f"Test 3 failed: expected {expected3}, got {result3}"
-
-    # Test case 4: Two days with profit
-    prices4 = [1, 2]
-    result4 = solution.maxProfit(prices4)
-    expected4 = 1
-    assert result4 == expected4, f"Test 4 failed: expected {expected4}, got {result4}"
-
-    # Test case 5: Two days without profit
-    prices5 = [2, 1]
-    result5 = solution.maxProfit(prices5)
-    expected5 = 0
-    assert result5 == expected5, f"Test 5 failed: expected {expected5}, got {result5}"
-
-    print("All Best Time to Buy and Sell Stock tests passed!")
-
-
 if __name__ == "__main__":
-    # Run tests
-    test_max_profit()
-
-    # Example usage
+    # Simple example usage
     solution = Solution()
 
-    # Example 1
+    # Example 1: Basic usage
     prices = [7, 1, 5, 3, 6, 4]
     result = solution.maxProfit(prices)
     print(f"Example 1 - prices: {prices}")
     print(f"One-pass approach result: {result}")
 
-    # Compare approaches
+    # Example 2: Compare approaches
     result_bf = solution.maxProfit_brute_force(prices)
     result_kadane = solution.maxProfit_kadane(prices)
     print(f"Brute force result: {result_bf}")

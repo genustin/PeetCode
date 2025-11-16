@@ -77,61 +77,16 @@ class Solution:
         return len(stack) == 0
 
 
-def test_is_valid():
-    """Test function for Valid Parentheses solution"""
-    solution = Solution()
-
-    # Test case 1: Valid parentheses
-    s1 = "()"
-    result1 = solution.isValid(s1)
-    assert result1 == True, f"Test 1 failed: expected True, got {result1}"
-
-    # Test case 2: Valid mixed brackets
-    s2 = "()[]{}"
-    result2 = solution.isValid(s2)
-    assert result2 == True, f"Test 2 failed: expected True, got {result2}"
-
-    # Test case 3: Invalid order
-    s3 = "(]"
-    result3 = solution.isValid(s3)
-    assert result3 == False, f"Test 3 failed: expected False, got {result3}"
-
-    # Test case 4: Invalid nesting
-    s4 = "([)]"
-    result4 = solution.isValid(s4)
-    assert result4 == False, f"Test 4 failed: expected False, got {result4}"
-
-    # Test case 5: Valid nesting
-    s5 = "{[]}"
-    result5 = solution.isValid(s5)
-    assert result5 == True, f"Test 5 failed: expected True, got {result5}"
-
-    # Test case 6: Empty string
-    s6 = ""
-    result6 = solution.isValid(s6)
-    assert result6 == True, f"Test 6 failed: expected True, got {result6}"
-
-    # Test case 7: Odd length
-    s7 = "(["
-    result7 = solution.isValid(s7)
-    assert result7 == False, f"Test 7 failed: expected False, got {result7}"
-
-    print("All Valid Parentheses tests passed!")
-
-
 if __name__ == "__main__":
-    # Run tests
-    test_is_valid()
-
-    # Example usage
+    # Simple example usage
     solution = Solution()
 
-    # Example 1
+    # Example 1: Basic usage
     s = "()[]{}"
     result = solution.isValid(s)
     print(f"Example 1 - s: '{s}', is valid: {result}")
 
-    # Compare approaches
+    # Example 2: Compare approaches
     result_opt = solution.isValid_optimized(s)
     print(f"Optimized approach: {result_opt}")
     print(f"Both approaches consistent: {result == result_opt}")

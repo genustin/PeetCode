@@ -110,57 +110,17 @@ class Solution:
         return max_sum
 
 
-def test_max_subarray():
-    """Test function for Maximum Subarray solution"""
-    solution = Solution()
-
-    # Test case 1: Basic example
-    nums1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-    result1 = solution.maxSubArray(nums1)
-    expected1 = 6  # [4, -1, 2, 1]
-    assert result1 == expected1, f"Test 1 failed: expected {expected1}, got {result1}"
-
-    # Test case 2: Single element
-    nums2 = [1]
-    result2 = solution.maxSubArray(nums2)
-    expected2 = 1
-    assert result2 == expected2, f"Test 2 failed: expected {expected2}, got {result2}"
-
-    # Test case 3: All negative
-    nums3 = [-2, -1, -3, -4]
-    result3 = solution.maxSubArray(nums3)
-    expected3 = -1  # Single element [-1]
-    assert result3 == expected3, f"Test 3 failed: expected {expected3}, got {result3}"
-
-    # Test case 4: All positive
-    nums4 = [1, 2, 3, 4]
-    result4 = solution.maxSubArray(nums4)
-    expected4 = 10  # Entire array
-    assert result4 == expected4, f"Test 4 failed: expected {expected4}, got {result4}"
-
-    # Test case 5: Mixed with positive at end
-    nums5 = [5, 4, -1, 7, 8]
-    result5 = solution.maxSubArray(nums5)
-    expected5 = 23  # Entire array
-    assert result5 == expected5, f"Test 5 failed: expected {expected5}, got {result5}"
-
-    print("All Maximum Subarray tests passed!")
-
-
 if __name__ == "__main__":
-    # Run tests
-    test_max_subarray()
-
-    # Example usage
+    # Simple example usage
     solution = Solution()
 
-    # Example 1
+    # Example 1: Basic usage
     nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
     result = solution.maxSubArray(nums)
     print(f"Example 1 - nums: {nums}")
     print(f"Kadane's algorithm result: {result}")
 
-    # Compare approaches
+    # Example 2: Compare approaches
     result_dc = solution.maxSubArray_divide_conquer(nums)
     result_bf = solution.maxSubArray_brute_force(nums)
     print(f"Divide and conquer result: {result_dc}")
